@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cr7h7vsa385"]
+
+[ext_resource type="Texture2D" uid="uid://c2vb6a8x85l7f" path="res://Assets/Sprite Fondo.png" id="1_nnte3"]
+[ext_resource type="PackedScene" uid="uid://8a7woed7gabl" path="res://Escenas/Jugador/jugador.tscn" id="2_4v0jt"]
+[ext_resource type="PackedScene" uid="uid://dnewbf6tod86m" path="res://Escenas/Comida/generador_de_comida.tscn" id="3_6oant"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnte3"]
+size = Vector2(3647, 182.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4v0jt"]
+size = Vector2(278, 2304)
+
+[node name="Juego" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1820, 1154)
+scale = Vector2(6.7375, 6.7375)
+texture = ExtResource("1_nnte3")
+
+[node name="Jugador" parent="." instance=ExtResource("2_4v0jt")]
+position = Vector2(571, 323)
+
+[node name="GeneradorDeComida" parent="." instance=ExtResource("3_6oant")]
+
+[node name="Limites" type="Node2D" parent="."]
+
+[node name="Limite Superior" type="StaticBody2D" parent="Limites"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite Superior"]
+position = Vector2(1817.25, -90)
+shape = SubResource("RectangleShape2D_nnte3")
+
+[node name="Limite Infreior" type="StaticBody2D" parent="Limites"]
+position = Vector2(0, 2488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite Infreior"]
+position = Vector2(1817.5, -90.75)
+shape = SubResource("RectangleShape2D_nnte3")
+
+[node name="Limite Izquierdo" type="StaticBody2D" parent="Limites"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite Izquierdo"]
+position = Vector2(-145, 1154)
+shape = SubResource("RectangleShape2D_4v0jt")
+
+[node name="Limite Derecho" type="StaticBody2D" parent="Limites"]
+position = Vector2(3925, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite Derecho"]
+position = Vector2(-145, 1154)
+shape = SubResource("RectangleShape2D_4v0jt")
