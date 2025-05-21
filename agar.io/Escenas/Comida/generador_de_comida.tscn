@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnewbf6tod86m"]
+
+[ext_resource type="Script" uid="uid://cdg1qkmbihou1" path="res://Escenas/Comida/generador_de_comida.gd" id="1_76rtt"]
+
+[node name="GeneradorDeComida" type="Node2D"]
+script = ExtResource("1_76rtt")
