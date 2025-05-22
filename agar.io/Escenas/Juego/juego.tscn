@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cr7h7vsa385"]
+[gd_scene load_steps=8 format=3 uid="uid://cr7h7vsa385"]
 
 [ext_resource type="Texture2D" uid="uid://c2vb6a8x85l7f" path="res://Assets/Sprite Fondo.png" id="1_nnte3"]
 [ext_resource type="PackedScene" uid="uid://8a7woed7gabl" path="res://Escenas/Jugador/jugador.tscn" id="2_4v0jt"]
 [ext_resource type="PackedScene" uid="uid://dnewbf6tod86m" path="res://Escenas/Comida/generador_de_comida.tscn" id="3_6oant"]
+[ext_resource type="PackedScene" uid="uid://bwqrp4e2bcjso" path="res://Escenas/Enemigo/enemigo.tscn" id="3_h685v"]
+[ext_resource type="Script" uid="uid://blne4jadqvcuy" path="res://Escenas/Enemigo/gestor_enemigo.gd" id="4_aq1p1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnte3"]
 size = Vector2(3647, 182.5)
@@ -18,7 +20,12 @@ scale = Vector2(6.7375, 6.7375)
 texture = ExtResource("1_nnte3")
 
 [node name="Jugador" parent="." instance=ExtResource("2_4v0jt")]
-position = Vector2(571, 323)
+position = Vector2(726, 400)
+
+[node name="GestorEnemigo" type="Node2D" parent="." node_paths=PackedStringArray("jugador")]
+script = ExtResource("4_aq1p1")
+jugador = NodePath("../Jugador")
+enemigo_escena = ExtResource("3_h685v")
 
 [node name="GeneradorDeComida" parent="." instance=ExtResource("3_6oant")]
 

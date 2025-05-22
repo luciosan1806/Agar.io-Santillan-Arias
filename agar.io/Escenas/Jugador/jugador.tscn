@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://8a7woed7gabl"]
+[gd_scene load_steps=6 format=3 uid="uid://8a7woed7gabl"]
 
 [ext_resource type="Script" uid="uid://cbh0a5rgvr4fy" path="res://Escenas/Jugador/jugador.gd" id="1_lr1px"]
 [ext_resource type="Texture2D" uid="uid://itw1ml5mbssc" path="res://Assets/Sprite Boca.png" id="2_nx28f"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nx28f"]
 radius = 36.2353
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3l46r"]
+radius = 37.2156
 
 [node name="Jugador" type="CharacterBody2D"]
 script = ExtResource("1_lr1px")
@@ -22,3 +25,8 @@ shape = SubResource("CircleShape2D_nx28f")
 position_smoothing_enabled = true
 script = ExtResource("3_3l46r")
 jugador = NodePath("..")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3l46r")
