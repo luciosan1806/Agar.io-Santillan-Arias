@@ -23,8 +23,8 @@ func establecer_objetivo(nueva_posicion):
 func _on_area_entered(area):
 	var jugador = area.get_parent()
 	if jugador.is_in_group("jugador"):
-		if scale.x > jugador.scale.x:  # Si el enemigo es más grande, come al jugador
+		if scale.x > jugador.scale.x:
 			jugador.queue_free()
-		else:  # Si el jugador es más grande, el enemigo es eliminado
+		else:
 			jugador.scale += Vector2(0.1, 0.1)
 			queue_free()

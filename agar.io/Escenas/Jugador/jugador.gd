@@ -5,6 +5,8 @@ const velocidadInicial = 200
 func _ready():
 	$Area2D.connect("area_entered", _on_area_entered)
 	add_to_group("jugador")
+	if Global.personaje_seleccionado:
+		$Sprite2D.texture = load(Global.personaje_seleccionado) 
 
 
 func _process(delta):
@@ -18,10 +20,10 @@ func _process(delta):
 	move_and_slide()
 	
 func _on_area_entered(area):
-	var enemigo = area.get_parent()  # Obtiene el nodo padre (enemigo)
+	var enemigo = area.get_parent()
 	if enemigo.is_in_group("enemigos"):
-		if enemigo.scale.x > scale.x:  # Si el enemigo es más grande, el jugador pierde
+		if enemigo.scale.x > scale.x:
 			queue_free()
-		else:  # Si el jugador es más grande, come al enemigo
+		else:
 			scale += Vector2(0.1, 0.1)
 			enemigo.queue_free()

@@ -20,7 +20,7 @@ scale = Vector2(6.7375, 6.7375)
 texture = ExtResource("1_nnte3")
 
 [node name="Jugador" parent="." instance=ExtResource("2_4v0jt")]
-position = Vector2(726, 400)
+position = Vector2(1818, 1155)
 
 [node name="GestorEnemigo" type="Node2D" parent="." node_paths=PackedStringArray("jugador")]
 script = ExtResource("4_aq1p1")

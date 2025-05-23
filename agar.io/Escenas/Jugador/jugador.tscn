@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://8a7woed7gabl"]
+[gd_scene load_steps=5 format=3 uid="uid://8a7woed7gabl"]
 
 [ext_resource type="Script" uid="uid://cbh0a5rgvr4fy" path="res://Escenas/Jugador/jugador.gd" id="1_lr1px"]
-[ext_resource type="Texture2D" uid="uid://itw1ml5mbssc" path="res://Assets/Sprite Boca.png" id="2_nx28f"]
 [ext_resource type="Script" uid="uid://cv4c45f8nrmwx" path="res://Escenas/Jugador/camera_2d.gd" id="3_3l46r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nx28f"]
@@ -16,7 +15,6 @@ script = ExtResource("1_lr1px")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 1)
 scale = Vector2(0.567708, 0.567708)
-texture = ExtResource("2_nx28f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nx28f")

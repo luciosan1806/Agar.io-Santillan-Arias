@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://djpd5xe63p74s"]
+
+[ext_resource type="Script" uid="uid://c300he5khevaw" path="res://Escenas/Escenas/seleccion_equipo.gd" id="1_oo8ej"]
+[ext_resource type="Texture2D" uid="uid://bpi6akbjr0s2s" path="res://Assets/Sprite Racing.png" id="2_c8pac"]
+[ext_resource type="Texture2D" uid="uid://c5ri2wqhdy8bh" path="res://Assets/Sprite River.png" id="3_rhdll"]
+[ext_resource type="Texture2D" uid="uid://yip2qgw2yutl" path="res://Assets/Sprite Independiente.png" id="4_2lnqr"]
+[ext_resource type="Texture2D" uid="uid://itw1ml5mbssc" path="res://Assets/Sprite Boca.png" id="5_c8pac"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c8pac"]
+font_size = 30
+
+[node name="SeleccionEquipo" type="Control" node_paths=PackedStringArray("personajes")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_oo8ej")
+personajes = [NodePath("GridContainer/Racing"), NodePath("GridContainer/River"), NodePath("GridContainer/Independiente"), NodePath("GridContainer/Boca")]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 80.0
+offset_right = 774.0
+offset_bottom = 122.0
+text = "SELECCIONE A SU EQUIPO"
+label_settings = SubResource("LabelSettings_c8pac")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 128.0
+offset_right = 772.0
+offset_bottom = 516.0
+columns = 2
+
+[node name="Racing" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_c8pac")
+
+[node name="River" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_rhdll")
+
+[node name="Independiente" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_2lnqr")
+
+[node name="Boca" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_c8pac")
