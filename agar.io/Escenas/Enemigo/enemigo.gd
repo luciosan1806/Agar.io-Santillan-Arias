@@ -6,6 +6,8 @@ var objetivo = Vector2.ZERO
 func _ready():
 	$Area2D.connect("area_entered", _on_area_entered)
 	add_to_group("enemigos")
+	scale.x = 2
+	scale.y = 2
 
 
 func _process(delta):
