@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgmg61mj0l47b"]
+
+[ext_resource type="Texture2D" uid="uid://dq8hq4kij2u3d" path="res://Assets/pessi.jpeg" id="1_ie04v"]
+[ext_resource type="Script" uid="uid://2nt6u5ps81gf" path="res://Escenas/Escenas/perdida.gd" id="1_o02m1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o02m1"]
+font_size = 30
+
+[node name="Perdida" type="Node2D"]
+script = ExtResource("1_o02m1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575.5, 322.5)
+scale = Vector2(5.09292, 2.88341)
+texture = ExtResource("1_ie04v")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 488.0
+offset_top = 8.0
+offset_right = 632.0
+offset_bottom = 50.0
+text = "PERDISTE!"
+label_settings = SubResource("LabelSettings_o02m1")
+
+[node name="Jugar" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 360.0
+offset_right = 216.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 25
+text = "Jugar"
+
+[node name="Salir" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 416.0
+offset_right = 216.0
+offset_bottom = 464.0
+theme_override_font_sizes/font_size = 25
+text = "Salir
+"
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

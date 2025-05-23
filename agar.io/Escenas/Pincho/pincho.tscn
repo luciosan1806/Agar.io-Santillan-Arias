@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc7mbp27h07ds"]
+
+[ext_resource type="Texture2D" uid="uid://6flmseq6wnac" path="res://Assets/Sprite Pinches.png" id="1_fs241"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pp35l"]
+radius = 37.0135
+
+[node name="Pincho" type="StaticBody2D" groups=["pinchos"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -1)
+scale = Vector2(0.539062, 0.539062)
+texture = ExtResource("1_fs241")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -1)
+shape = SubResource("CircleShape2D_pp35l")

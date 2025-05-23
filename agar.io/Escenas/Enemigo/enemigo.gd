@@ -6,8 +6,8 @@ var objetivo = Vector2.ZERO
 func _ready():
 	$Area2D.connect("area_entered", _on_area_entered)
 	add_to_group("enemigos")
-	scale.x = 2
-	scale.y = 2
+	scale.x = 2.5
+	scale.y = 2.5
 
 
 func _process(delta):
@@ -25,6 +25,7 @@ func _on_area_entered(area):
 	if jugador.is_in_group("jugador"):
 		if scale.x > jugador.scale.x:
 			jugador.queue_free()
+			get_tree().change_scene_to_file("res://Escenas/Escenas/perdida.tscn")
 		else:
 			jugador.scale += Vector2(0.1, 0.1)
 			queue_free()

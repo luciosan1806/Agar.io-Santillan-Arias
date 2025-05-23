@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr7h7vsa385"]
+[gd_scene load_steps=9 format=3 uid="uid://cr7h7vsa385"]
 
 [ext_resource type="Texture2D" uid="uid://c2vb6a8x85l7f" path="res://Assets/Sprite Fondo.png" id="1_nnte3"]
 [ext_resource type="PackedScene" uid="uid://8a7woed7gabl" path="res://Escenas/Jugador/jugador.tscn" id="2_4v0jt"]
 [ext_resource type="PackedScene" uid="uid://dnewbf6tod86m" path="res://Escenas/Comida/generador_de_comida.tscn" id="3_6oant"]
 [ext_resource type="PackedScene" uid="uid://bwqrp4e2bcjso" path="res://Escenas/Enemigo/enemigo.tscn" id="3_h685v"]
 [ext_resource type="Script" uid="uid://blne4jadqvcuy" path="res://Escenas/Enemigo/gestor_enemigo.gd" id="4_aq1p1"]
+[ext_resource type="PackedScene" uid="uid://cc7mbp27h07ds" path="res://Escenas/Pincho/pincho.tscn" id="6_h685v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnte3"]
 size = Vector2(3647, 182.5)
@@ -56,3 +57,37 @@ position = Vector2(3925, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Limite Derecho"]
 position = Vector2(-145, 1154)
 shape = SubResource("RectangleShape2D_4v0jt")
+
+[node name="ContenedorPinchos" type="Node2D" parent="."]
+
+[node name="Pincho" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(533, 644)
+scale = Vector2(4, 4)
+
+[node name="Pincho2" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(1140, 1985)
+scale = Vector2(4, 4)
+
+[node name="Pincho3" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(1015, 956)
+scale = Vector2(3, 3)
+
+[node name="Pincho4" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(547, 1746)
+scale = Vector2(3, 3)
+
+[node name="Pincho5" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(2196, 579)
+scale = Vector2(4, 4)
+
+[node name="Pincho6" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(2224, 1755)
+scale = Vector2(5, 5)
+
+[node name="Pincho7" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(3005, 451)
+scale = Vector2(3, 3)
+
+[node name="Pincho8" parent="ContenedorPinchos" instance=ExtResource("6_h685v")]
+position = Vector2(2840, 1112)
+scale = Vector2(3, 3)

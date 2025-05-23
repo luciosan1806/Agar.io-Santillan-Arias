@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwqrp4e2bcjso"]
 
 [ext_resource type="Script" uid="uid://ba5n7mqabo23c" path="res://Escenas/Enemigo/enemigo.gd" id="1_y5tge"]
-[ext_resource type="Texture2D" uid="uid://6flmseq6wnac" path="res://Assets/Sprite Pinches.png" id="2_y5tge"]
+[ext_resource type="Texture2D" uid="uid://itw1ml5mbssc" path="res://Assets/Sprite Boca.png" id="2_y5tge"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y5tge"]
 radius = 36.5034
